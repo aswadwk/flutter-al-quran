@@ -23,18 +23,31 @@ class IntroductionView extends GetView<IntroductionController> {
             SizedBox(height: 10),
             Text(
               "Bacalah",
-              style: TextStyle(fontSize: 15),
+              style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 10),
-            Container(
-              width: 300,
-              height: 300,
-              child: Lottie.asset('assets/animations/splash_screen.json'),
-            ),
             SizedBox(height: 10),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(15),
+              child: Container(
+                width: 300,
+                height: 300,
+                child: Lottie.asset('assets/animations/splash_screen.json'),
+              ),
+            ),
+            SizedBox(height: 16),
             ElevatedButton(
-                onPressed: () => Get.offAllNamed(Routes.HOME),
-                child: Text('Ngaji Yuk'))
+              onPressed: () => Get.offAllNamed(Routes.HOME),
+              child: Text(
+                'Ngaji Yuk',
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 50,
+                  vertical: 15,
+                ),
+              ),
+            )
           ],
         ),
       ),

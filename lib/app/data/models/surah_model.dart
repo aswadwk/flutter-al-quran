@@ -157,13 +157,13 @@ class Verse {
   Audio? audio;
   VerseTafsir? tafsir;
 
-  factory Verse.fromJson(Map<String, dynamic> json) => Verse(
-        number: Number.fromJson(json["number"]),
-        meta: Meta.fromJson(json["meta"]),
-        textt: Textt.fromJson(json["text"]),
-        translation: Translation?.fromJson(json["translation"]),
-        audio: Audio.fromJson(json["audio"]),
-        tafsir: VerseTafsir.fromJson(json["tafsir"]),
+  factory Verse.fromJson(Map<String, dynamic>? json) => Verse(
+        number: Number.fromJson(json?["number"]),
+        meta: Meta.fromJson(json?["meta"]),
+        textt: Textt.fromJson(json?["text"]),
+        translation: Translation?.fromJson(json?["translation"]),
+        audio: Audio.fromJson(json?["audio"]),
+        tafsir: VerseTafsir.fromJson(json?["tafsir"]),
       );
 
   Map<String, dynamic> toJson() => {
