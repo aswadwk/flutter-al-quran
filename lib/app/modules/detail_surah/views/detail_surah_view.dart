@@ -23,7 +23,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
         children: [
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
                   Text(
@@ -31,7 +31,11 @@ class DetailSurahView extends GetView<DetailSurahController> {
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "${surah.numberOfVerses ?? '-'}-Ayat",
+                    "${surah.name?.translation?.id}",
+                    style: TextStyle(fontSize: 12),
+                  ),
+                  Text(
+                    "${surah.numberOfVerses ?? '-'}-Ayat | ${surah.revelation?.id}",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                 ],
