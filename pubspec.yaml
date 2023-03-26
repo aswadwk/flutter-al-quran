@@ -8,6 +8,8 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
+  http: 0.13.5
+  lottie: 2.3.0
   flutter: 
     sdk: flutter
 
@@ -17,5 +19,7 @@ dev_dependencies:
     sdk: flutter
 
 flutter: 
+  assets: 
+    - assets/animations/
   uses-material-design: true
 

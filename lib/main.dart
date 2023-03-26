@@ -11,7 +11,7 @@ void main() {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      initialRoute: AppPages.INITIAL,
+      initialRoute: Routes.INTRODUCTION,
       getPages: AppPages.routes,
     ),
   );
