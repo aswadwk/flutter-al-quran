@@ -1,4 +1,5 @@
 import 'package:al_quran/app/data/models/surah_model.dart';
+import 'package:al_quran/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -28,13 +29,14 @@ class HomeView extends GetView<HomeController> {
                   child: Text("Tidak ada data"),
                 );
               }
-              print(snapshot.data);
               return ListView.builder(
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, index) {
                     Surah surah = snapshot.data![index];
                     return ListTile(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed(Routes.DETAIL_SURAH, arguments: surah);
+                      },
                       leading: CircleAvatar(
                         child: Text("${surah.number}"),
                       ),
