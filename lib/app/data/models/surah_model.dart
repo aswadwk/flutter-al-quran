@@ -144,7 +144,7 @@ class Verse {
   Verse({
     this.number,
     this.meta,
-    this.text,
+    this.textt,
     this.translation,
     this.audio,
     this.tafsir,
@@ -152,7 +152,7 @@ class Verse {
 
   Number? number;
   Meta? meta;
-  Text? text;
+  Textt? textt;
   Translation? translation;
   Audio? audio;
   VerseTafsir? tafsir;
@@ -160,7 +160,7 @@ class Verse {
   factory Verse.fromJson(Map<String, dynamic> json) => Verse(
         number: Number.fromJson(json["number"]),
         meta: Meta.fromJson(json["meta"]),
-        text: Text.fromJson(json["text"]),
+        textt: Textt.fromJson(json["textt"]),
         translation: Translation?.fromJson(json["translation"]),
         audio: Audio.fromJson(json["audio"]),
         tafsir: VerseTafsir.fromJson(json["tafsir"]),
@@ -169,7 +169,7 @@ class Verse {
   Map<String, dynamic> toJson() => {
         "number": number?.toJson(),
         "meta": meta?.toJson(),
-        "text": text?.toJson(),
+        "textt": textt?.toJson(),
         "translation": translation?.toJson(),
         "audio": audio?.toJson(),
         "tafsir": tafsir?.toJson(),
@@ -310,8 +310,8 @@ class Id {
       };
 }
 
-class Text {
-  Text({
+class Textt {
+  Textt({
     required this.arab,
     required this.transliteration,
   });
@@ -319,7 +319,7 @@ class Text {
   String arab;
   Transliteration transliteration;
 
-  factory Text.fromJson(Map<String, dynamic> json) => Text(
+  factory Textt.fromJson(Map<String, dynamic> json) => Textt(
         arab: json["arab"],
         transliteration: Transliteration.fromJson(json["transliteration"]),
       );
